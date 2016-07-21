@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sjmx</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (instancetype)initWithDic:(NSDictionary *)dic
+{
+    if (self = [super init])
+    {
+        [self setValuesForKeysWithDictionary:dic];
+    }
+    return self;
+}
+
++ (instancetype)&lt;#app#&gt;WithDic:(NSDictionary *)dic
+{
+    return [[self alloc] initWithDic:dic];
+}
+
++ (NSArray *)&lt;#apps#&gt;
+{
+    NSArray *sourceArr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"&lt;#plist#&gt;" ofType:nil]];
+    NSMutableArray *desArr = [NSMutableArray array];
+    for (NSDictionary *dic in sourceArr)
+    {
+        MZApp *app = [MZApp &lt;#apps#&gt;WithDic:dic];
+        [desArr addObject:app];
+    }
+    return desArr;
+                          
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4236EF5E-9643-4077-B6D7-6C6ED80F1033</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>数据模型</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
